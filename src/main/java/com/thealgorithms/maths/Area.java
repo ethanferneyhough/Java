@@ -1,3 +1,4 @@
+
 package com.thealgorithms.maths;
 
 /**
@@ -78,10 +79,10 @@ public final class Area {
      */
     public static double surfaceAreaPyramid(final double sideLength, final double slantHeight) {
         if (sideLength <= 0) {
-            throw new IllegalArgumentException("");
+            throw new IllegalArgumentException("Must be a positive sideLength");
         }
         if (slantHeight <= 0) {
-            throw new IllegalArgumentException("slant height must be greater than 0");
+            throw new IllegalArgumentException("Must be a positive slantHeight");
         }
         double baseArea = sideLength * sideLength;
         double lateralSurfaceArea = 2 * sideLength * slantHeight;
@@ -92,7 +93,7 @@ public final class Area {
      * Calculate the area of a rectangle.
      *
      * @param length length of a rectangle
-     * @param width  width of a rectangle
+     * @param width width of a rectangle
      * @return area of given rectangle
      */
     public static double surfaceAreaRectangle(final double length, final double width) {
